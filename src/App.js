@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useCallback} from 'react';
 import Button from './components/UI/Button/Button'
 import './App.css';
 import DemoOutput from './components/Demo/DemoOutput';
@@ -6,9 +6,9 @@ import DemoOutput from './components/Demo/DemoOutput';
 function App() {
    const [showpara,setShowPara] = useState(false)
 
-   const toggleparahandler = props => {
+   const toggleparahandler = useCallback(()  => {
      setShowPara(showpara=>!showpara)
-   }
+   },[]);
    console.log("app.js running")
   return (
     <div className="app">

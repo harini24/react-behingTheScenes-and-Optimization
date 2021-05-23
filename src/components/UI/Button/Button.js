@@ -16,4 +16,4 @@ const Button = (props) => {
   );
 };
 
-export default React.Memo(Button);
+export default React.memo(Button);
